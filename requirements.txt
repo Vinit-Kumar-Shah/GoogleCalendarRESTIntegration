@@ -65,6 +65,7 @@ pyflakes==2.5.0
 pylev==1.4.0
 pyparsing==3.0.9
 pyseto==1.7.0
+python-decouple==3.8
 python-lsp-jsonrpc==1.0.0
 pytoolconfig==1.2.5
 pytz==2023.3

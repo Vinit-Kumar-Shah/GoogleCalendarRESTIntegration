@@ -11,14 +11,15 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
 import os
 
-GOOGLE_CLIENT_ID = "245725996438-s85igngroa0pclkdu9m5h451ib61135q.apps.googleusercontent.com"
-GOOGLE_CLIENT_SECRET = "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"
-GOOGLE_PROJECT_ID = "shubham-389506"
-GOOGLE_AUTH_URI = "https://accounts.google.com/o/oauth2/auth"
-GOOGLE_AUTH_PROVIDER_CERT_URL = "https://www.googleapis.com/oauth2/v1/certs"
-GOOGLE_TOKEN ="https://oauth2.googleapis.com/token"
+GOOGLE_CLIENT_ID = config('GOOGLE_CLIENT_ID')
+GOOGLE_CLIENT_SECRET = config('GOOGLE_CLIENT_SECRET')
+GOOGLE_PROJECT_ID = config('GOOGLE_PROJECT_ID')
+GOOGLE_AUTH_URI = config('GOOGLE_AUTH_URI')
+GOOGLE_AUTH_PROVIDER_CERT_URL = config('GOOGLE_AUTH_PROVIDER_CERT_URL')
+GOOGLE_TOKEN = config('GOOGLE_TOKEN')
 GOOGLE_REDIRECT_URIS = [
       "http://localhost:8000/rest/v1/calendar/redirect",
       "http://127.0.0.1:8000/rest/v1/calendar/redirect/",
